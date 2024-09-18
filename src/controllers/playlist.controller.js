@@ -58,7 +58,7 @@ const getPlaylistById = asyncHandler(async (req, res) => {
         },
         {
             $lookup: {
-                from: "Video",
+                from: "videos",
                 localField: "videos",
                 foreignField: "_id",
                 as: "videos"
@@ -71,7 +71,7 @@ const getPlaylistById = asyncHandler(async (req, res) => {
         },
         {
             $lookup:{
-                from: "User",
+                from: "users",
                 localField: "owner",
                 foreignField: "_id",
                 as: "owner",
@@ -116,7 +116,8 @@ const getPlaylistById = asyncHandler(async (req, res) => {
             }
         }
     ]);
-
+    console.log("PLAYLIST VIDEOS---",playlistVideos[0]);
+    
     return res
         .status(200)
         .json(new ApiResponse(200, playlistVideos[0], "playlist fetched successfully"));
@@ -246,7 +247,7 @@ const deletePlaylist = asyncHandler(async (req, res) => {
             new ApiResponse(
                 200,
                 {},
-                "playlist updated successfully"
+                "playlist deleted successfully"
             )
         );    
 
