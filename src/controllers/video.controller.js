@@ -309,6 +309,10 @@ const getVideoById = asyncHandler(async (req, res) => {
                 watchHistory: videoId
             }
         });//The video ID is added to the user’s watchHistory array. The $addToSet operator ensures that the video ID is added only if it doesn’t already exist in the array.
+    console.log("Video DATA----",video[0]);
+    const videoExists = await Video.findById(videoId);
+console.log("Video exists:", videoExists);
+
     
         return res
             .status(200)
