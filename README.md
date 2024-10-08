@@ -4,7 +4,7 @@ This is a ``YOUTUBE`` backend project that covers allmost the functionalities of
 and also combines the tweet functionality from twitter into it which acts as a community post in youtube. Find more about his project in the documentaion below.
 - [Model link](https://app.eraser.io/workspace/YtPqZ1VogxGy1jzIDkzj?origin=share)
 
-- [Postman API Documentation](https://www.youtube.com/watch?v=EH3vGeqeIAo&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW)
+- [Postman API Documentation](https://documenter.getpostman.com/view/37740363/2sAXxPBDhZ)
 
 ---
 # Summary of this project
