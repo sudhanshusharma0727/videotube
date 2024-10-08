@@ -346,7 +346,7 @@ const updateVideo = asyncHandler(async (req, res) => {
     // Find the existing video record
     const videoData = await Video.findById(videoId);
     if (!videoData) {
-        throw new ApiErrors(404, "Video data not found");
+        throw new ApiError(404, "Video data not found");
     }
     // Check if the authenticated user is the owner of the video
     if (videoData.owner.toString() !== userId.toString()) {
